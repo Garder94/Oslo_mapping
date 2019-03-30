@@ -1,0 +1,25 @@
+{
+  "name": "tekna",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client \""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "beefy": "^2.1.8",
+    "browserify": "^16.2.3"
+  },
+  "dependencies": {
+    "concurrently": "^4.1.0",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10",
+    "react-leaflet": "^2.2.1",
+    "xls-parser": "^3.0.0",
+    "xlsx": "^0.14.1"
+  }
+}
