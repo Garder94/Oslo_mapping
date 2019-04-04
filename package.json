@@ -19,6 +19,7 @@
     "express": "^4.16.4",
     "nodemon": "^1.18.10",
     "react-leaflet": "^2.2.1",
+    "react-scripts": "^2.1.8",
     "xls-parser": "^3.0.0",
     "xlsx": "^0.14.1"
   }
