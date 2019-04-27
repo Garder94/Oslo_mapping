@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 var contents = fs.readFileSync('./dataset/myjsonfile.json', 'utf8');
 var jsonContent = JSON.parse(contents);
+
 var year_table = [];
 var oslo_table = [];
 var old_oslo_table = [];
@@ -116,8 +117,25 @@ for (var key in jsonContent.table[0][20]) {
 router.get('/:test', (req, res) => {
   console.log(req.params.test);
   var index = year_table.indexOf(req.params.test);
-  console.log();
-  var table = [oslo_table[index], old_oslo_table[index]];
+
+  var table = [
+    oslo_table[index],
+    old_oslo_table[index],
+    lokka_oslo_table[index],
+    sagene_oslo_table[index],
+    haugen_oslo_table[index],
+    frogner_oslo_table[index],
+    ullern_oslo_table[index],
+    va_oslo_table[index],
+    na_oslo_table[index],
+    bjerke_oslo_table[index],
+    grorud_oslo_table[index],
+    stovner_oslo_table[index],
+    alna_oslo_table[index],
+    ostensjo_oslo_table[index],
+    nordstrand_oslo_table[index],
+    s_nordstrand_oslo_table[index]
+  ];
 
   res.json({ msg: table });
 });
